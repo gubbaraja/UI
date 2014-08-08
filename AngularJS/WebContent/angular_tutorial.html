@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="">
+<html data-ng-app="">
 <head>
 
 <title>Angular JS Tutorial</title>
@@ -8,16 +8,16 @@
 
 <h3>Using ng-model directive and Data binding expression to display the name entered in text box</h3>
 
-Name : <input type="text" ng-model="name"/> {{name}} 
+Name : <input type="text" data-ng-model="name"/> {{name}} 
 
 <br/> <br/>
 
 <h3>Using ng-init directive to Initiate Variables and ng-repeat directive to iterate over the list of varaibles</h3>
 
-<div class="container" ng-init="books=['Java','Design Patterns','Design and Analysis of Algorithms','OOAD']">
+<div class="container" data-ng-init="books=['Java','Design Patterns','Design and Analysis of Algorithms','OOAD']">
 
 <ul>
-	<li ng-repeat="book in books">{{book}}</li>
+	<li data-ng-repeat="book in books">{{book}}</li>
 </ul>
 
 </div>
@@ -28,12 +28,12 @@ Name : <input type="text" ng-model="name"/> {{name}}
 
 <h3>Using filters & Uppercase/lowercase</h3>
 
-Technology : <input type="text" ng-model="technology"/>
+Technology : <input type="text" data-ng-model="technology"/>
 
-<div ng-init="technologies=[{technology:'JAVA',company:'Sun'},{technology:'Hadoop',company:'Apache'},{technology:'STS',company:'spring'}]">
+<div data-ng-init="technologies=[{technology:'JAVA',company:'Sun'},{technology:'Hadoop',company:'Apache'},{technology:'STS',company:'spring'}]">
 
 <ul>
-	<li ng-repeat="tech in technologies | filter:technology"> {{tech.technology | uppercase }} by {{tech.company | lowercase}}</li>
+	<li data-ng-repeat="tech in technologies | filter:technology"> {{tech.technology | uppercase }} by {{tech.company | lowercase}}</li>
 </ul>
 
 </div>
