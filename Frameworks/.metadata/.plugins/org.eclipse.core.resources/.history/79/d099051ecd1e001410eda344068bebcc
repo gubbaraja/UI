@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="">
+<head>
+
+<title>Angular JS Tutorial</title>
+</head>
+<body>
+
+<h3>Using ng-model directive and Data binding expression to display the name entered in text box</h3>
+
+Name : <input type="text" ng-model="name"/> {{name}} 
+
+<br/> <br/>
+
+<h3>Using ng-init directive to Initiate Variables and ng-repeat directive to iterate over the list of varaibles</h3>
+
+<div class="container" ng-init="books=['Java','Design Patterns','Design and Analysis of Algorithms','OOAD']">
+
+<ul>
+	<li ng-repeat="book in books">{{book}}</li>
+</ul>
+
+</div>
+
+<script src="../JS/angular.min.js"></script>
+</body>
+</html>

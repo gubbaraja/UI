@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html data-ng-app="">
+<head>
+
+<title>Angular JS Tutorial</title>
+</head>
+<body>
+
+<h3>Using ng-model directive and Data binding expression to display the name entered in text box</h3>
+
+Name : <input type="text" data-ng-model="name"/> {{name}} 
+
+<br/> <br/>
+
+<h3>Using ng-init directive to Initiate Variables and ng-repeat directive to iterate over the list of varaibles</h3>
+
+<div class="container" data-ng-init="books=['Java','Design Patterns','Design and Analysis of Algorithms','OOAD']">
+
+<ul>
+	<li data-ng-repeat="book in books">{{book}}</li>
+</ul>
+
+</div>
+
+
+<br/><br/><br/>
+
+
+<h3>Using filters & Uppercase/lowercase</h3>
+
+Technology : <input type="text" data-ng-model="technology"/>
+
+<div data-ng-init="technologies=[{technology:'JAVA',company:'Sun'},{technology:'Hadoop',company:'Apache'},{technology:'STS',company:'spring'}]">
+
+<ul>
+	<li data-ng-repeat="tech in technologies | filter:technology"> {{tech.technology | uppercase }} by {{tech.company | lowercase}}</li>
+</ul>
+
+</div>
+
+
+<br/><br/><br/>
+
+<h3>Using Controllers and Scope</h3>
+<div class="container" data-ng-controller="CustController">
+<ul>
+	<li data-ng-repeat="cust in customers"> {{cust.n
+</ul>
+</div>
+<script src="../JS/angular.min.js"></script>
+
+<script>
+	function custController($scope){
+		$scope.customers=[{custname:'Ram',city:'Hyderabad'},
+		                  {custname:'John',city:'New York'},
+		                  {custname:'Sam',city:'Melbourne'}];
+	}
+</script>
+</body>
+</html>
